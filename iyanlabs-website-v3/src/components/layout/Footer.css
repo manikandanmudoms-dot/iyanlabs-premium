@@ -1,0 +1,27 @@
+.footer { position: relative; overflow: clip; contain: paint; background: var(--void); padding-top: var(--s-2xl); color: var(--text-2); border-top: 1px solid var(--line); }
+.footer__floor { position: absolute; left: -25%; right: -25%; bottom: -20%; height: 80%; pointer-events: none; transform-origin: 50% 100%; transform: perspective(600px) rotateX(62deg);
+  background-image: linear-gradient(rgba(139, 92, 246, 0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 211, 238, 0.3) 1px, transparent 1px); background-size: 60px 60px;
+  mask-image: linear-gradient(to top, #000 10%, transparent 80%); -webkit-mask-image: linear-gradient(to top, #000 10%, transparent 80%); }
+.footer__horizon { position: absolute; left: 0; right: 0; bottom: 34%; height: 140px; pointer-events: none; background: radial-gradient(50% 50% at 50% 100%, rgba(236, 72, 153, 0.35), rgba(139, 92, 246, 0.15) 50%, transparent 75%); }
+.footer__inner { position: relative; z-index: 1; will-change: transform; }
+.footer__top { display: grid; grid-template-columns: 5fr 7fr; gap: var(--s-2xl); padding-bottom: var(--s-xl); }
+.footer__brand { display: grid; gap: 16px; align-content: start; max-width: 380px; }
+.footer__logo { justify-self: start; display: inline-flex; min-height: 44px; align-items: center; text-decoration: none; border-radius: var(--r); }
+.footer__desc { font-size: 14px; line-height: 22px; }
+.footer__nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
+.footer__nav h2 { color: var(--text); margin-bottom: 14px; }
+.footer__nav ul { display: grid; gap: 2px; }
+.footer__nav a { --c: #22d3ee; display: inline-flex; align-items: center; min-height: 40px; color: var(--text-2); text-decoration: none; font-size: 14px; word-break: break-word;
+  background: linear-gradient(var(--c), var(--c)) 0 calc(100% - 8px) / 0 1px no-repeat; transition: background-size 500ms var(--ease-out), color 300ms; }
+.footer__nav a:hover { color: var(--text); background-size: 100% 1px; }
+.footer__mark { display: grid; padding-inline: var(--margin); margin: var(--s-lg) 0 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(56px, 13vw, 210px); line-height: 0.9; letter-spacing: -0.06em; color: var(--text); white-space: nowrap; overflow: hidden; }
+.footer__mark-line { display: block; will-change: transform; }
+.footer__mark .grad { justify-self: end; padding-right: 0.04em; }
+.footer__bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: var(--s-lg); margin-top: var(--s-lg); border-top: 1px solid var(--line); font-size: 13px; }
+.footer__motto { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; color: #5ee3f5; }
+@media (max-width: 1024px) { .footer__top { grid-template-columns: 1fr; } }
+@media (max-width: 639px) {
+  .footer__nav { grid-template-columns: 1fr 1fr; }
+  .footer__nav > div:last-child { grid-column: 1 / -1; }
+  .footer__bottom { padding-bottom: 76px; }
+}
