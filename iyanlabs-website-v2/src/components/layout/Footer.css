@@ -1,0 +1,25 @@
+.footer { position: relative; overflow: hidden; background: var(--black); padding-top: var(--s-2xl); color: var(--on-dark-2); }
+.footer__veil { position: absolute; inset: 0; z-index: 2 !important; background: var(--charcoal); pointer-events: none; opacity: 0; }
+.footer__inner { will-change: transform; }
+.footer__top { display: grid; grid-template-columns: 5fr 7fr; gap: var(--s-2xl); padding-bottom: var(--s-xl); }
+.footer__brand { display: grid; gap: 16px; align-content: start; max-width: 380px; }
+.footer__logo { justify-self: start; display: inline-flex; min-height: 44px; align-items: center; text-decoration: none; border-radius: var(--r); }
+.footer__desc { font-size: 14px; line-height: 22px; }
+.footer__nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
+.footer__nav h2 { color: var(--ivory); margin-bottom: 14px; }
+.footer__nav ul { display: grid; gap: 2px; }
+.footer__nav a { display: inline-flex; align-items: center; min-height: 40px; color: var(--on-dark-2); text-decoration: none; font-size: 14px; word-break: break-word;
+  background: linear-gradient(var(--tc), var(--tc)) 0 calc(100% - 8px) / 0 1px no-repeat; transition: background-size 500ms var(--ease-out), color 300ms; }
+.footer__nav a:hover { color: var(--ivory); background-size: 100% 1px; }
+.footer__mark { display: grid; padding-inline: var(--margin); margin: var(--s-lg) 0 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(56px, 13vw, 210px); line-height: 0.88; letter-spacing: -0.06em; color: var(--ivory); white-space: nowrap; overflow: hidden; }
+.footer__mark-line { display: block; will-change: transform; }
+.footer__mark .accent { font-size: 1.04em; letter-spacing: -0.03em; justify-self: end; color: var(--tc); }
+.footer__bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: var(--s-lg); margin-top: var(--s-lg); border-top: 1px solid var(--line-dark); font-size: 13px; }
+.footer__motto { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.06em; color: var(--tc-light); }
+
+@media (max-width: 1024px) { .footer__top { grid-template-columns: 1fr; } }
+@media (max-width: 639px) {
+  .footer__nav { grid-template-columns: 1fr 1fr; }
+  .footer__nav > div:last-child { grid-column: 1 / -1; }
+  .footer__bottom { padding-bottom: 76px; }
+}

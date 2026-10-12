@@ -1,0 +1,31 @@
+.proc { overflow: hidden; }
+.proc__head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--s-lg); margin-bottom: var(--s-2xl); }
+.proc__hint { font-family: var(--font-display); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-2); }
+.proc__viewport { overflow: hidden; }
+.proc__num { display: block; font-family: var(--font-display); font-weight: 700; line-height: 0.9; letter-spacing: -0.06em; color: transparent; -webkit-text-stroke: 1.5px var(--tc-light); transform-origin: 50% 100%; font-size: clamp(56px, 14vw, 96px); }
+.proc__card { display: grid; gap: 12px; padding: var(--s-lg); border-radius: var(--r-lg); background: var(--charcoal-raised); border: 1px solid var(--line-dark); }
+.proc__card h3 { color: var(--ivory); }
+.proc__card p { color: var(--on-dark-2); font-size: 16px; line-height: 26px; }
+.proc__out { display: grid; gap: 4px; padding-top: 12px; border-top: 1px solid var(--line-dark); color: var(--ivory) !important; font-weight: 500; }
+.proc__out .t-label { color: var(--tc-light); }
+.proc__fill { position: absolute; inset: 0; border-radius: 2px; }
+.proc__dot { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: var(--tc); box-shadow: 0 0 0 6px rgba(200, 100, 59, 0.15); }
+
+/* Default (no JS, tablet, mobile, short screens, reduced motion): vertical timeline */
+.proc__hint { display: none; }
+.proc__track { position: relative; display: flex; flex-direction: column; gap: var(--s-xl); padding-left: calc(var(--margin) + 36px); }
+.proc__rail { position: absolute; left: calc(var(--margin) + 6px); top: 8px; bottom: 8px; width: 2px; background: var(--graphite-line); border-radius: 2px; }
+.proc__rail .proc__fill { transform-origin: top; background: linear-gradient(180deg, var(--tc-deep), var(--tc-light)); }
+.proc__step { position: relative; display: grid; gap: 18px; align-content: start; }
+.proc__dot { top: 8px; left: -36px; }
+
+/* Desktop with motion: pinned horizontal film strip */
+@media (min-width: 1025px) and (min-height: 700px) and (prefers-reduced-motion: no-preference) {
+  html.has-motion .proc__hint { display: block; }
+  html.has-motion .proc__track { flex-direction: row; width: max-content; max-width: none; padding-top: 36px; padding-left: var(--margin); will-change: transform; }
+  html.has-motion .proc__rail { left: var(--margin); right: var(--margin); top: 8px; bottom: auto; width: auto; height: 2px; }
+  html.has-motion .proc__rail .proc__fill { transform-origin: left; background: linear-gradient(90deg, var(--tc-deep), var(--tc-light)); }
+  html.has-motion .proc__step { width: min(46vw, 560px); flex: none; }
+  html.has-motion .proc__dot { top: -34px; left: 0; }
+  html.has-motion .proc__num { font-size: clamp(80px, 10vw, 150px); }
+}

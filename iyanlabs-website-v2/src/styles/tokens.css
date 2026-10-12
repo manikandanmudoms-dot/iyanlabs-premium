@@ -1,0 +1,78 @@
+/* Design tokens.
+ * Structure (type scale, spacing, radius, grid) follows DESIGN.md.
+ * Colour follows the premium palette in PROMPT.json, which overrides DESIGN.md colours. */
+:root {
+  /* Premium palette */
+  --black: #0b0b0c;
+  --charcoal: #141416;
+  --charcoal-raised: #1c1c1f;
+  --graphite: #2a2a2e;
+  --graphite-line: #3a3a3f;
+  --ivory: #f7f2ea;
+  --ivory-soft: #fbf8f3;
+  --sand: #ede4d6;
+  --sand-deep: #e2d6c3;
+  --tc: #c8643b;
+  --tc-deep: #a64b26;
+  --tc-light: #e08a5f;
+  --tc-tint: #f6e3d8;
+
+  --ink: #141416;
+  --ink-2: #5e5750;
+  --ink-3: #8a8178; /* decorative / large text only on ivory */
+  --on-dark: #f7f2ea;
+  --on-dark-2: #b9b1a6;
+  --line-light: #e5dccd;
+  --line-dark: #2e2e33;
+  --success: #5e8c6a;
+  --error: #b4442a;
+
+  /* Type (DESIGN.md families) */
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+
+  /* Radius (DESIGN.md) */
+  --r-sm: 0.25rem;
+  --r: 0.5rem;
+  --r-md: 0.75rem;
+  --r-lg: 1rem;
+  --r-xl: 1.5rem;
+  --r-full: 9999px;
+
+  /* Spacing (DESIGN.md 4/8 baseline) */
+  --s-xs: 0.25rem;
+  --s-sm: 0.5rem;
+  --s-md: 1rem;
+  --s-lg: 1.5rem;
+  --s-xl: 2.5rem;
+  --s-2xl: 4rem;
+  --s-3xl: 8rem;
+
+  /* Layout */
+  --container: 1440px;
+  --margin: 2rem;
+  --gutter: 1.5rem;
+  --header-h: 76px;
+
+  /* Elevation */
+  --shadow-1: 0 1px 2px rgba(20, 20, 22, 0.05);
+  --shadow-2: 0 10px 30px -10px rgba(20, 20, 22, 0.18);
+  --shadow-3: 0 30px 60px -20px rgba(0, 0, 0, 0.55);
+  --ring: 0 0 0 3px rgba(200, 100, 59, 0.35);
+
+  /* Motion tokens (mirrored in src/motion/tokens.ts) */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 180ms;
+  --dur-short: 400ms;
+  --dur-medium: 800ms;
+  --dur-long: 1400ms;
+}
+
+@media (max-width: 1024px) {
+  :root { --margin: 1.5rem; --gutter: 1.25rem; --s-3xl: 6rem; }
+}
+@media (max-width: 639px) {
+  :root { --margin: 1rem; --gutter: 1rem; --s-3xl: 4.5rem; --header-h: 64px; }
+}
