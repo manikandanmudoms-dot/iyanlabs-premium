@@ -1,0 +1,15 @@
+.marquee { position: relative; padding-block: 28px; background: var(--void); border-block: 1px solid var(--line); overflow: clip; display: grid; gap: 14px; }
+.marquee__row { mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee__row--b { transform: rotate(-1.2deg); }
+.marquee__track { display: flex; width: max-content; will-change: transform; }
+.marquee__item { display: inline-flex; align-items: center; gap: 30px; padding-right: 30px; font-family: var(--font-display); font-weight: 600; font-size: clamp(26px, 3.4vw, 50px); letter-spacing: -0.035em; white-space: nowrap; color: var(--text); transition: color var(--dur-short); }
+.marquee__row--b .marquee__item { color: transparent; -webkit-text-stroke: 1px rgba(169, 176, 199, 0.65); }
+.marquee__row--a .marquee__item:nth-child(3n + 2) { background: var(--spectrum); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.marquee__star { font-style: normal; font-size: 0.42em; color: var(--cyan); text-shadow: 0 0 12px var(--cyan); -webkit-text-stroke: 0; }
+.marquee__row--b .marquee__star { color: var(--magenta); text-shadow: 0 0 12px var(--magenta); }
+.marquee__pause { position: absolute; right: var(--margin); top: 50%; transform: translateY(-50%); z-index: 2; min-height: 44px; min-width: 64px; padding: 0 12px; border-radius: var(--r-full); border: 1px solid var(--glass-border); background: rgba(10, 11, 20, 0.9); color: var(--text-2); font-family: var(--font-mono); font-size: 12px; cursor: pointer; opacity: 0; transition: opacity var(--dur-short); }
+.marquee:hover .marquee__pause, .marquee__pause:focus-visible, .marquee.is-paused .marquee__pause { opacity: 1; }
+@media (hover: none) { .marquee__pause { opacity: 1; } }
+html:not(.has-motion) .marquee__track { flex-wrap: wrap; width: auto; justify-content: center; }
+html:not(.has-motion) .marquee__item:nth-child(n + 10) { display: none; }
+html:not(.has-motion) .marquee__pause { display: none; }

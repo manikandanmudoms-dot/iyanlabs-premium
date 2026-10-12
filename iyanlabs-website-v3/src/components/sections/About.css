@@ -1,0 +1,32 @@
+.about { background: radial-gradient(70% 50% at 20% 30%, rgba(139, 92, 246, 0.12), transparent 70%), var(--void); }
+.about__top { display: grid; grid-template-columns: 5fr 7fr; gap: var(--s-2xl); align-items: start; }
+.about__head { position: sticky; top: calc(var(--header-h) + 48px); }
+.about__values { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); }
+.about__value { display: grid; gap: 12px; align-content: start; padding: var(--s-lg); border-radius: var(--r-xl); transition: border-color var(--dur-short), transform var(--dur-short) var(--ease-out); background: rgba(17, 19, 31, 0.75); }
+.about__value:hover { border-color: var(--tone); transform: translateY(-4px); }
+.about__value:nth-child(even) { margin-top: 48px; }
+.about__value p { color: var(--text-2); font-size: 14px; line-height: 22px; }
+.about__icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 14px; background: color-mix(in srgb, var(--tone) 12%, transparent); border: 1px solid color-mix(in srgb, var(--tone) 45%, transparent); box-shadow: 0 0 24px -8px var(--tone); }
+.about__icon path { fill: none; stroke: var(--tone); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; }
+.about__idx { position: absolute; right: 20px; top: 20px; color: var(--text-3); }
+
+.leaders { margin-top: var(--s-3xl); padding-top: var(--s-xl); border-top: 1px solid var(--line); }
+.leaders__title { color: var(--text-2); margin-bottom: var(--s-lg); }
+.leaders__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
+.leader { display: flex; align-items: center; gap: 16px; padding: 18px; border-radius: var(--r-lg); background: rgba(17, 19, 31, 0.75); transition: border-color var(--dur-short); }
+.leader:hover { border-color: var(--tone); }
+.leader__mono { position: relative; flex: none; width: 58px; height: 58px; border-radius: 50%; padding: 2px; background: conic-gradient(from var(--spin), var(--tone), #8b5cf6, #22d3ee, var(--tone)); animation: spinVar 5s linear infinite; }
+@keyframes spinVar { to { --spin: 360deg; } }
+.leader__mono span { display: grid; place-items: center; width: 100%; height: 100%; border-radius: 50%; background: var(--surface); font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--text); }
+.leader__name { font-family: var(--font-display); font-weight: 600; font-size: 17px; }
+.leader__role { font-size: 13px; line-height: 19px; color: var(--text-2); }
+
+@media (max-width: 1024px) {
+  .about__top { grid-template-columns: 1fr; }
+  .about__head { position: static; }
+  .leaders__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 639px) {
+  .about__values { grid-template-columns: 1fr; }
+  .about__value:nth-child(even) { margin-top: 0; }
+}

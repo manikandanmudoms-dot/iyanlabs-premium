@@ -1,0 +1,9 @@
+.boot { position: fixed; inset: 0; z-index: 280; display: grid; place-items: center; background: var(--void); cursor: pointer; overflow: hidden; }
+.boot__inner { position: relative; display: grid; place-items: center; }
+.boot__line { font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.04em; color: var(--text-2); min-height: 20px; }
+.boot__prompt { color: var(--mint); }
+.boot__caret { display: inline-block; width: 8px; height: 15px; margin-left: 4px; vertical-align: -2px; background: var(--cyan); animation: caret 0.8s steps(1) infinite; }
+@keyframes caret { 50% { opacity: 0; } }
+.boot__spark { position: absolute; left: 50%; top: calc(100% + 40px); width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: radial-gradient(circle, #fff 0%, #b79cff 35%, #22d3ee 60%, transparent 72%); box-shadow: 0 0 40px 12px rgba(139, 92, 246, 0.6); opacity: 0; }
+.boot__skip { position: absolute; right: 24px; bottom: 24px; min-height: 44px; padding: 0 16px; border-radius: var(--r-full); border: 1px solid var(--glass-border); background: transparent; color: var(--text-2); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; }
+.boot__skip:hover { color: var(--text); border-color: var(--cyan); }
