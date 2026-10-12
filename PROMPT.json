@@ -1,0 +1,400 @@
+{
+  "project": {
+    "name": "iyanLabs Digital Experience",
+    "type": "Production-ready corporate website",
+    "platform": "Google Antigravity",
+    "brand": "iyanLabs",
+    "reference_website": "https://iyanlabs.com/",
+    "design_system_file": "DESIGN.md",
+    "primary_goal": "Create a distinctive, premium, highly animated website that positions iyanLabs as a trusted technology consulting and engineering partner for Salesforce solutioning, MuleSoft integration, and mobile application development.",
+    "secondary_goals": [
+      "Generate qualified business enquiries",
+      "Clearly communicate the value of all three service offerings",
+      "Demonstrate how the services work together through motion-led storytelling",
+      "Showcase engineering expertise and practical business outcomes",
+      "Present Varavu as an example of iyanLabs building its own software product"
+    ]
+  },
+
+  "role": "Act as a world-class creative director, senior UI/UX designer, frontend architect, motion designer, and conversion-focused B2B website strategist. Build the actual website in the current project workspace. Do not stop after producing a visual concept or implementation plan.",
+
+  "instructions": {
+    "first": [
+      "Inspect the existing project files, package configuration, application framework, and available assets before making changes.",
+      "Read DESIGN.md for typography, spacing, radius, grid, and component structure. COLOR OVERRIDE: replace the DESIGN.md violet/orange/cyan palette with the premium palette defined in this prompt. Update the centralized design tokens so no old violet, cyan, or bright orange values remain.",
+      "Review https://iyanlabs.com/ to understand the existing brand, services, product positioning, and public content.",
+      "Preserve useful existing functionality and project conventions. Do not overwrite unrelated work.",
+      "Create an implementation plan, then build and run the website in the current workspace."
+    ],
+    "implementation": [
+      "Use the existing framework if one is already configured.",
+      "If the workspace is empty, use React, TypeScript, and Vite with a maintainable component structure.",
+      "Use GSAP with ScrollTrigger for scroll-driven and pinned scenes, and Lenis for smooth scrolling. Use CSS and SVG for simple loops and micro-interactions. Do not add other animation libraries.",
+      "Use reusable components and centralized design tokens and motion tokens.",
+      "Do not create nonfunctional buttons, fake forms, placeholder navigation, or dead links.",
+      "Do not claim that a contact form sends messages unless a real submission mechanism is configured.",
+      "Run available build checks, resolve errors, and verify responsive behavior before completing the task."
+    ]
+  },
+
+  "creative_concept": {
+    "title": "From Business Challenges to Connected Experiences",
+    "central_idea": "A business challenge enters the iyanLabs studio. The team discovers the problem, designs the solution, connects the systems, and brings the experience to life across mobile devices and enterprise platforms.",
+    "brand_narrative": "We understand your business before we engineer your solution. We build the applications, connect the systems, and help turn technology into meaningful business value.",
+    "tagline": "We Build Different.",
+    "supporting_tagline": "Understand. Connect. Build. Deliver.",
+    "creative_direction": "A premium, cinematic engineering atelier. Deep charcoal stages alternate with warm ivory editorial pages. Terracotta-orange is the single signature accent: it lights the data pathways, marks key actions, and glows on active nodes. Motion feels like a precise, high-end product film: slow confident reveals, smooth pinned scenes, and tactile micro-interactions.",
+    "differentiation": "Avoid the generic IT consultancy template of a blue hero, three stock-photo service cards, and a testimonial carousel. Avoid neon gradients and glassmorphism. Make the visual storytelling revolve around a connected technology ecosystem, real business workflows, and luxury-grade restraint."
+  },
+
+  "brand_design_system": {
+    "source": "DESIGN.md for structure; this prompt for color (overrides DESIGN.md colors)",
+    "palette": {
+      "black": "#0B0B0C",
+      "charcoal": "#141416",
+      "charcoal_raised": "#1C1C1F",
+      "graphite": "#2A2A2E",
+      "graphite_line": "#3A3A3F",
+      "ivory": "#F7F2EA",
+      "ivory_soft": "#FBF8F3",
+      "sand": "#EDE4D6",
+      "sand_deep": "#E2D6C3",
+      "terracotta": "#C8643B",
+      "terracotta_deep": "#A64B26",
+      "terracotta_light": "#E08A5F",
+      "terracotta_tint": "#F6E3D8",
+      "text_on_light": "#141416",
+      "text_secondary_on_light": "#5E5750",
+      "text_muted_on_light": "#8A8178",
+      "text_on_dark": "#F7F2EA",
+      "text_secondary_on_dark": "#B9B1A6",
+      "border_light": "#E5DCCD",
+      "border_dark": "#2E2E33",
+      "success": "#5E8C6A",
+      "error": "#B4442A"
+    },
+    "color_usage": {
+      "charcoal_and_black": "Hero stage, ecosystem architecture, MuleSoft panel, process film strip, closing CTA, and footer. These are the cinematic 'dark stages'.",
+      "ivory_and_sand": "Editorial reading sections: challenge, Salesforce and mobile panels, Varavu, about, and the contact form surface.",
+      "terracotta": "The only accent color. Use it for primary CTAs, active data pathways, live nodes, selected states, highlighted words, progress lines, and focus rings. Use it sparingly so it stays special.",
+      "terracotta_light": "Glows, animated gradients on dark backgrounds, and moving data packets.",
+      "graphite": "Secondary UI chrome, inactive nodes, dividers, and device frames.",
+      "status": "Use shape, icon, and label in addition to color. Never rely on color alone."
+    },
+    "contrast_rules": [
+      "Body text must meet WCAG AA: use #141416 or #5E5750 on ivory, and #F7F2EA or #B9B1A6 on charcoal.",
+      "Use terracotta #C8643B text only at 18px+ bold on ivory. Use #A64B26 for smaller terracotta text on light backgrounds.",
+      "Primary button: #C8643B background with #FBF8F3 label; hover #A64B26."
+    ],
+    "texture_and_depth": [
+      "Subtle animated film grain overlay (2–4% opacity) on dark stages.",
+      "Fine architectural grid lines in #2E2E33 on dark and #E5DCCD on light.",
+      "Soft terracotta radial glow behind key visuals on dark stages (low opacity, slowly breathing).",
+      "Restrained shadows, hairline borders, and layered panels. No heavy glassmorphism."
+    ],
+    "typography": {
+      "headings": { "font": "Space Grotesk", "weight": "600–700", "style": "Bold, geometric, tight negative letter spacing; large editorial sizes on dark stages." },
+      "body": { "font": "Inter", "weight": "400–500", "style": "Clear, readable, approachable." },
+      "labels": { "font": "Space Grotesk", "style": "Small uppercase technical labels with wide letter spacing, often in terracotta or muted sand." },
+      "accent_option": "Optionally use an italic serif (for example, Instrument Serif) for one or two highlighted words per headline to add a premium editorial feel.",
+      "loading": "Load fonts with font-display: swap and preconnect; provide system fallbacks."
+    },
+    "layout": {
+      "max_width": "1440px",
+      "desktop_grid": "12 columns",
+      "tablet_grid": "8 columns",
+      "mobile_grid": "4 columns",
+      "desktop_gutter": "24px",
+      "mobile_gutter": "16px",
+      "section_spacing": "Generous vertical spacing with deliberate alternation of dark and light stages.",
+      "card_radius": "8px for standard components and 16–24px for major feature panels.",
+      "buttons": "Rounded rectangular controls with crisp borders, magnetic hover, and clear labels."
+    }
+  },
+
+  "motion_system": {
+    "principle": "Motion is the primary storytelling medium. Every animation must show how systems, people, and business processes connect, or guide attention toward an action. It must feel premium: smooth, weighted, and confident, never bouncy or gimmicky.",
+    "motion_tokens": {
+      "ease_primary": "cubic-bezier(0.22, 1, 0.36, 1) / GSAP 'expo.out'",
+      "ease_inout": "cubic-bezier(0.65, 0, 0.35, 1) / GSAP 'power3.inOut'",
+      "duration_micro": "180ms",
+      "duration_short": "400ms",
+      "duration_medium": "800ms",
+      "duration_long": "1400ms",
+      "stagger_default": "60–90ms"
+    },
+    "global_effects": [
+      "Intro sequence (first visit only, max 1.6s, skippable, cached in sessionStorage): the iyanLabs mark draws itself in terracotta strokes on charcoal, then the screen splits open to reveal the hero.",
+      "Lenis smooth scrolling synced with ScrollTrigger. Disable it for reduced motion and on touch devices if it hurts native feel.",
+      "Top scroll-progress bar in terracotta.",
+      "Custom desktop cursor: a small ivory dot with a trailing ring. The ring grows and shows a contextual label ('View', 'Explore', 'Drag') over interactive elements. Hide it on touch devices and for reduced motion.",
+      "Cursor spotlight: a soft terracotta radial light follows the pointer on dark stages.",
+      "Magnetic buttons: primary CTAs drift subtly toward the cursor within a small radius.",
+      "Split-text headline reveals: words or lines rise from a mask with a stagger as each section enters.",
+      "Section color transitions: the page background smoothly morphs between charcoal and ivory as you scroll between dark and light stages.",
+      "Animated film grain on dark stages.",
+      "Image and visual reveals with clip-path wipes (inset or diagonal) instead of plain fades."
+    ],
+    "section_choreography": {
+      "header": "Starts transparent over the charcoal hero with ivory text. After scrolling, it becomes a compact charcoal bar with a hairline border. It hides on scroll down and reappears on scroll up. Nav links get an animated terracotta underline that slides between items. The mobile menu opens as a full-screen charcoal overlay with staggered large links.",
+      "hero": [
+        "Charcoal stage with a slowly breathing terracotta glow and grain.",
+        "Headline 'We Build Different.' reveals line by line; 'Different.' is in terracotta with an animated underline stroke.",
+        "Three modules (CRM workspace, API layer, mobile app) assemble in 3D space with staggered depth, then settle.",
+        "Terracotta data pathways draw between modules via SVG stroke animation; glowing packets travel along them continuously.",
+        "Active nodes pulse with soft terracotta rings.",
+        "Desktop pointer parallax across three depth layers.",
+        "As you scroll out, the modules separate and drift upward (scroll-scrubbed), handing off to the next section.",
+        "A rotating word ticker under the headline cycles: 'Salesforce · MuleSoft · Mobile'.",
+        "Scroll cue: a thin animated line with 'Scroll' label."
+      ],
+      "capability_marquee": "Below the hero, an infinite horizontal marquee of capabilities (Salesforce, Apex, LWC, OmniStudio, MuleSoft Anypoint, DataWeave, API-led, iOS, Android, React Native, Flutter). It moves slowly, speeds up with scroll velocity, and pauses on hover.",
+      "challenge": "Pinned scene on desktop (about 150vh). Fragmented app panels float apart with offsets and rotation. As you scroll, they snap into a clean grid, terracotta connection lines draw between them, and a label morphs from 'Disconnected' to 'Connected workspace'. The three challenge cards slide in alongside with a stagger. Fully reversible.",
+      "services": {
+        "intro": "Headline split reveal; a large outlined number counter (01 → 03) changes as each service panel comes into view.",
+        "salesforce": "Ivory panel. The CRM window wipes in with a clip-path; Lead → Opportunity → Customer steps light up sequentially in terracotta; modules slide from scattered to aligned. 3D tilt on hover (desktop).",
+        "mulesoft": "Charcoal panel. Pinned API network: source systems (CRM, ERP, Database) light up one by one, packets flow through System → Process → Experience API layers, then arrive at Mobile app and Cloud services. Each layer label highlights as the packet passes. Scroll-scrubbed and reversible.",
+        "mobile": "Ivory panel. Three phones fan out from a stack. The center phone cycles dashboard → task workflow → completed order with a checkmark draw animation. Side phones float gently.",
+        "shared": "Capability lists stagger in. The CTA arrow animates on hover. On mobile, use simple fades and keep all content visible without hover."
+      },
+      "ecosystem": "Charcoal stage. Nodes (Salesforce, MuleSoft, Mobile Apps, Business Systems) orbit slightly around MuleSoft at the center. Directional terracotta paths animate between them. Hover, focus, or tap on a node highlights its connections, dims others, and animates a detail panel. On mobile, it becomes a vertical flow with animated connector lines that draw on scroll.",
+      "process": "Desktop: horizontal scroll section pinned to the viewport. The four steps (Discover, Design, Build, Launch and Improve) move sideways as you scroll vertically, with a terracotta progress line filling across and each step's number flipping in. Mobile: a vertical timeline with a line that fills on scroll.",
+      "work_and_varavu": "Varavu devices (desktop, tablet, phone) enter from different directions and lock together. The billing chart line draws itself, invoice rows stagger in, and a 'Payment received' toast slides in. Verified figures from the official site ('20+ MuleSoft integrations', '20+ Salesforce applications') count up once on view. The illustrative concept cards lift with tilt and a terracotta border glow on hover.",
+      "about": "Values cards reveal with a stagger and an icon line-draw. Leadership cards use animated monogram tiles (initials draw in terracotta strokes). Optional slow sticky headline on desktop.",
+      "contact": "Charcoal frame with an ivory form card. Terracotta pathways flow around the frame edges. Fields get an animated underline on focus, and labels float. The submit button is magnetic, shows a loading shimmer while sending, and plays a checkmark morph on success. Errors shake gently (2px, once) with an inline message.",
+      "footer": "Revealed from beneath the page (curtain effect) with an oversized 'We Build Different.' wordmark that slides in on scroll. Links get a terracotta underline animation."
+    },
+    "technical_rules": [
+      "Animate only transform, opacity, clip-path, and SVG stroke properties. Avoid animating layout properties.",
+      "Use GSAP ScrollTrigger for pinned and scrubbed scenes; keep pins to the challenge, MuleSoft, and process sections on desktop.",
+      "All scroll animations must be reversible when scrolling back up.",
+      "Initialize animations with gsap.context() and clean them up on unmount.",
+      "Lazy-initialize heavy scenes when they approach the viewport.",
+      "Maintain 60fps on a mid-range laptop. Avoid more than three simultaneous infinite loops per viewport and pause loops when off-screen.",
+      "Critical text and CTAs must be visible even if JavaScript or animation fails (hidden states applied only after JS loads).",
+      "prefers-reduced-motion: disable the intro sequence, Lenis, pinning, parallax, custom cursor, marquee speed changes, and loops; show final states with simple fades."
+    ],
+    "responsive_motion": {
+      "desktop": "Full choreography including pins, horizontal process scroll, cursor effects, and parallax.",
+      "tablet": "Keep reveals, path drawing, and counters. Replace pins with in-view triggers. No custom cursor.",
+      "mobile": "Lightweight fades, slide-ups, line draws, and phone screen cycling only. No pinning, horizontal scroll, parallax, or cursor effects."
+    }
+  },
+
+  "website_content": {
+    "navigation": {
+      "logo": "iyanLabs",
+      "links": [
+        { "label": "Our Approach", "target": "#approach" },
+        { "label": "Services", "target": "#services" },
+        { "label": "Our Work", "target": "#work" },
+        { "label": "About", "target": "#about" }
+      ],
+      "primary_cta": { "label": "Let's Talk", "target": "#contact" }
+    },
+    "hero": {
+      "eyebrow": "ENGINEERING WHAT'S NEXT",
+      "headline": "We Build Different.",
+      "headline_support": "Technology that moves your business forward.",
+      "body": "From Salesforce solutions and MuleSoft integrations to high-performance mobile applications, iyanLabs turns complex business challenges into connected digital experiences.",
+      "primary_cta": { "label": "Discuss Your Project", "target": "#contact" },
+      "secondary_cta": { "label": "Explore Our Services", "target": "#services" },
+      "trust_line": "Business-first thinking. Engineering-led delivery. Built for what comes next.",
+      "hero_visual": {
+        "concept": "The iyanLabs Connected Systems Studio",
+        "description": "Three interconnected modules on a charcoal stage: a CRM workspace, an API connectivity layer, and a mobile app, connected by animated terracotta pathways with glowing packets.",
+        "avoid": ["Generic stock photography", "Neon gradients", "Unrelated humanoid robots", "Unreadable interface text", "Fake customer logos"]
+      }
+    },
+    "problem_statement": {
+      "id": "approach",
+      "eyebrow": "THE CHALLENGE",
+      "headline": "Your Business Shouldn't Have to Work Around Your Technology.",
+      "body": "Disconnected systems, repetitive manual work, and clunky digital experiences can slow teams down. We help bring your applications, data, and business processes together through practical engineering and thoughtful solution design.",
+      "cards": [
+        { "title": "Disconnected Systems", "description": "Bring CRM platforms, enterprise applications, and operational data into a more connected ecosystem." },
+        { "title": "Complex Business Workflows", "description": "Simplify processes with solutions designed around how your people actually work." },
+        { "title": "Digital Experiences That Fall Short", "description": "Create useful, responsive applications that help customers and teams get things done." }
+      ]
+    },
+    "services": {
+      "id": "services",
+      "eyebrow": "WHAT WE DO",
+      "headline": "Three Capabilities. One Connected Technology Partner.",
+      "body": "Whether you need a stronger CRM, connected enterprise systems, or a mobile application, we bring the right engineering expertise to your business challenge.",
+      "items": [
+        {
+          "number": "01",
+          "name": "Salesforce Solutions",
+          "headline": "Make Your CRM Work the Way Your Business Works.",
+          "description": "We help organizations design, customize, and improve Salesforce solutions that support customer relationships, streamline operations, and give teams better ways to work.",
+          "capabilities": ["Salesforce solutioning and architecture", "Sales Cloud and Service Cloud", "Custom Apex development", "Lightning Web Components", "OmniStudio and guided workflows", "CRM customization and enhancements", "Platform optimization and ongoing support"],
+          "business_value": "Create a more useful CRM experience, reduce workflow friction, and align Salesforce with your business processes.",
+          "visual_concept": "The Customer Command Center (do not reproduce Salesforce trademarks or imply an official partnership)",
+          "cta": { "label": "Explore Salesforce Solutions", "target": "#contact", "preselect_topic": "Salesforce Solutions" }
+        },
+        {
+          "number": "02",
+          "name": "MuleSoft Integration",
+          "headline": "Connect Your Systems. Unlock Your Data.",
+          "description": "We design and build MuleSoft integration solutions that help applications and enterprise systems exchange information through well-structured APIs and reliable data flows.",
+          "capabilities": ["MuleSoft Anypoint Platform", "API-led connectivity", "REST and SOAP API integration", "DataWeave transformations", "Cloud and legacy system connectivity", "Integration architecture and implementation", "Integration monitoring and support"],
+          "business_value": "Reduce information silos, improve data consistency, and create connected workflows across your technology ecosystem.",
+          "visual_concept": "The Connected Systems Network",
+          "cta": { "label": "Explore MuleSoft Integration", "target": "#contact", "preselect_topic": "MuleSoft Integration" }
+        },
+        {
+          "number": "03",
+          "name": "Mobile App Development",
+          "headline": "Powerful Digital Experiences, Wherever Work Happens.",
+          "description": "We build thoughtful, high-performance mobile applications that help businesses serve customers, empower field teams, and extend digital workflows beyond the desktop.",
+          "capabilities": ["Mobile product discovery and planning", "iOS and Android application development", "Cross-platform development with React Native or Flutter", "Mobile UI and UX design", "Backend and API integration", "Business workflow and field-force applications", "Testing, release, and ongoing enhancements"],
+          "business_value": "Make business processes accessible on the move with mobile experiences designed around users and real operational needs.",
+          "visual_concept": "Business in Your Pocket",
+          "cta": { "label": "Explore Mobile Development", "target": "#contact", "preselect_topic": "Mobile App Development" }
+        }
+      ]
+    },
+    "connected_ecosystem": {
+      "id": "ecosystem",
+      "eyebrow": "THE BIGGER PICTURE",
+      "headline": "Your Systems Should Work as One.",
+      "body": "Salesforce helps manage customer relationships. MuleSoft connects applications and data. Mobile apps bring your digital workflows directly to the people who need them. Together, these capabilities can create a more connected business experience.",
+      "nodes": [
+        { "name": "Salesforce", "role": "Customer relationships and CRM workflows" },
+        { "name": "MuleSoft", "role": "API connectivity and data exchange" },
+        { "name": "Mobile Apps", "role": "Customer and employee experiences" },
+        { "name": "Business Systems", "role": "Operational platforms and enterprise data" }
+      ],
+      "node_styling": "Distinguish nodes by icon, label, and shade (ivory, sand, terracotta, graphite), not by hue alone. MuleSoft is the central hub with a terracotta glow."
+    },
+    "approach_process": {
+      "id": "process",
+      "eyebrow": "HOW WE WORK",
+      "headline": "A Clear Path from Challenge to Delivery.",
+      "steps": [
+        { "number": "01", "title": "Discover", "description": "Understand your goals, business challenges, existing systems, and the people who use them.", "deliverable": "Shared understanding and a clearly defined problem." },
+        { "number": "02", "title": "Design", "description": "Shape the solution architecture, user experience, integration approach, and delivery plan.", "deliverable": "A practical solution blueprint." },
+        { "number": "03", "title": "Build", "description": "Develop, integrate, and test the solution through focused engineering and iterative feedback.", "deliverable": "A working solution aligned with the agreed scope." },
+        { "number": "04", "title": "Launch and Improve", "description": "Prepare for release, support adoption, and identify opportunities for ongoing improvement.", "deliverable": "A supported solution with a path for continuous improvement." }
+      ]
+    },
+    "work_and_product": {
+      "id": "work",
+      "eyebrow": "ENGINEERED FOR REAL-WORLD NEEDS",
+      "headline": "We Don't Just Deliver Solutions. We Build Products, Too.",
+      "body": "Our work spans custom enterprise solutions and software products shaped by practical business needs.",
+      "featured_product": {
+        "name": "Varavu",
+        "headline": "Billing, Simplified.",
+        "description": "Varavu is an iyanLabs billing and invoicing product designed to help small businesses manage invoices, payments, and financial visibility across their everyday operations.",
+        "features": ["Invoicing and billing", "Revenue visibility", "Payment reminders", "Cross-device access and synchronization", "Customer records and expense tracking"],
+        "cta": { "label": "Explore Varavu", "url": "https://iyanlabs.com/products.html" }
+      },
+      "portfolio": {
+        "title": "Engineering Across Business Needs",
+        "verified_figures": ["20+ MuleSoft integrations delivered", "20+ Salesforce applications delivered"],
+        "rules": [
+          "Use only the verified figures above; do not invent other metrics.",
+          "Do not fabricate case studies, client names, testimonials, or logos.",
+          "Show capability demonstrations clearly labeled 'Illustrative concept'."
+        ]
+      }
+    },
+    "about": {
+      "id": "about",
+      "eyebrow": "THE PEOPLE BEHIND THE ENGINEERING",
+      "headline": "A Technology Partner That Thinks Beyond the Code.",
+      "body": "At iyanLabs, we believe good engineering starts with understanding the problem. We combine business context, technical expertise, and thoughtful execution to build solutions that are useful today and maintainable tomorrow.",
+      "values": [
+        { "title": "Business First", "description": "Start with the real problem and define what success means before choosing the technology." },
+        { "title": "Engineering with Purpose", "description": "Choose clear architecture, maintainable code, and solutions appropriate to the challenge." },
+        { "title": "Transparent Collaboration", "description": "Communicate progress, surface risks, and keep stakeholders involved throughout delivery." },
+        { "title": "Built for What's Next", "description": "Consider future maintenance, growth, and change from the beginning." }
+      ],
+      "leadership_source": "Use names and roles only as published on https://iyanlabs.com/about.html. Do not generate fake portraits; use animated monogram tiles unless real approved photos are provided."
+    },
+    "final_cta": {
+      "id": "contact",
+      "eyebrow": "LET'S BUILD SOMETHING MEANINGFUL",
+      "headline": "Tell Us What You're Trying to Solve.",
+      "body": "Whether you need Salesforce expertise, a connected enterprise architecture, or a mobile application, let's explore the right solution for your business.",
+      "primary_cta": "Start a Conversation",
+      "secondary_cta": "Explore Our Services",
+      "form_fields": [
+        { "label": "Your name", "type": "text", "required": true },
+        { "label": "Work email", "type": "email", "required": true },
+        { "label": "Company", "type": "text", "required": false },
+        { "label": "What can we help you with?", "type": "select", "options": ["Salesforce Solutions", "MuleSoft Integration", "Mobile App Development", "Multiple Services", "Other"], "required": true },
+        { "label": "Tell us about your project", "type": "textarea", "required": true }
+      ],
+      "submission": "Client-side validation with accessible errors. POST JSON to VITE_CONTACT_ENDPOINT when configured. If not configured, open a pre-filled email to reachus@iyanlabs.com and tell the visitor to press send. Never report a message as sent unless the endpoint confirms it.",
+      "contact_details": { "email": "reachus@iyanlabs.com", "linkedin": "https://in.linkedin.com/in/iyan-labs-764abb402" },
+      "privacy": "Include a short privacy notice. Link to privacy and terms pages only if verified official pages exist."
+    },
+    "footer": {
+      "brand": "iyanLabs",
+      "tagline": "We Build Different.",
+      "description": "Salesforce solutions, MuleSoft integration, and mobile applications for businesses ready to move forward.",
+      "navigation_groups": [
+        { "title": "Services", "links": ["Salesforce Solutions", "MuleSoft Integration", "Mobile App Development"] },
+        { "title": "Explore", "links": ["Our Approach", "Our Work", "About"] },
+        { "title": "Connect", "links": ["Contact", "LinkedIn", "reachus@iyanlabs.com"] }
+      ],
+      "requirements": ["Use verified URLs only.", "Use the current year dynamically."]
+    }
+  },
+
+  "accessibility": [
+    "Semantic HTML, one h1, logical heading hierarchy, and a skip link.",
+    "Visible terracotta focus rings on light and dark backgrounds.",
+    "Label every form control and announce submission status with a live region.",
+    "Hide decorative SVGs and the custom cursor from assistive technology.",
+    "Provide a pause control for the marquee and any looping animation longer than 5 seconds.",
+    "Respect prefers-reduced-motion as defined in the motion system.",
+    "Keep the ecosystem diagram usable with keyboard, pointer, and touch, with text descriptions for each connection."
+  ],
+
+  "seo_and_metadata": {
+    "title": "iyanLabs | Salesforce Solutions, MuleSoft Integration & Mobile Apps",
+    "description": "iyanLabs helps businesses build Salesforce solutions, connect enterprise systems with MuleSoft, and develop mobile applications tailored to real-world needs.",
+    "canonical": "https://iyanlabs.com/",
+    "requirements": [
+      "Open Graph title, description, and a 1200×630 image in the premium palette.",
+      "Favicon from the approved brand asset when available.",
+      "Organization structured data with verified details only.",
+      "Title and description present without JavaScript."
+    ]
+  },
+
+  "performance": [
+    "Lighthouse targets: Performance 90+ on desktop, 80+ on mobile; Accessibility 95+.",
+    "Code-split GSAP scenes and load them only when needed.",
+    "Prefer SVG and CSS visuals; use AVIF/WebP for any raster images and lazy-load below the fold.",
+    "Reserve dimensions to prevent layout shift; keep the intro sequence from blocking first content paint.",
+    "Pause off-screen animations and limit concurrent loops.",
+    "Test the production build."
+  ],
+
+  "implementation_plan": [
+    { "phase": 1, "name": "Inspect and Plan", "tasks": ["Inspect the repository and DESIGN.md.", "Review the official iyanLabs website.", "Map sections, components, and the motion choreography."] },
+    { "phase": 2, "name": "Premium Visual System", "tasks": ["Replace color tokens with the premium palette.", "Add motion tokens, grain, grid, and glow utilities.", "Build the header, footer, buttons, labels, and panels."] },
+    { "phase": 3, "name": "Build the Website", "tasks": ["Hero, marquee, challenge, services, ecosystem, process, Varavu and work, about, contact, footer."] },
+    { "phase": 4, "name": "Motion and Interaction", "tasks": ["Intro sequence, Lenis + ScrollTrigger setup.", "Split-text reveals, clip-path wipes, path drawing, packets.", "Pinned challenge and MuleSoft scenes, horizontal process scroll.", "Custom cursor, spotlight, magnetic buttons, tilt.", "Reduced-motion and mobile fallbacks."] },
+    { "phase": 5, "name": "Verify and Refine", "tasks": ["Run build and lint checks; fix errors.", "Test desktop, tablet, and mobile, including reversible scroll scenes.", "Check frame rate, contrast, keyboard navigation, and form states.", "Report what was implemented, tested, and still needs configuration."] }
+  ],
+
+  "acceptance_criteria": [
+    "The site uses only the premium palette: charcoal/black, terracotta-orange, and ivory/off-white. No violet, cyan, or bright orange remains.",
+    "Salesforce, MuleSoft, and mobile development are clear within the first few scrolls.",
+    "Every section has purposeful motion as specified, and the experience feels cinematic and premium.",
+    "Scroll scenes are smooth, reversible, and do not trap or hijack scrolling.",
+    "Reduced-motion and mobile versions remain complete and readable.",
+    "All internal links work, and external links use verified destinations.",
+    "No fake metrics, logos, testimonials, or invented project claims.",
+    "The application runs and builds successfully.",
+    "The final response summarizes completed work, how to run it, verification results, and remaining setup."
+  ],
+
+  "final_instruction": "Build the complete iyanLabs website in the current Google Antigravity workspace with the premium charcoal, terracotta, and ivory palette and rich, purposeful animation. Prioritize clarity, cinematic storytelling, polished engineering details, smooth performance, and genuine conversion opportunities. Deliver a working website, not just a mockup or proposal."
+}

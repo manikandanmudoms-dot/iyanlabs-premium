@@ -1,0 +1,40 @@
+.challenge { overflow: clip; }
+.challenge__inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-2xl); align-items: center; }
+.challenge__copy { display: grid; gap: var(--s-xl); }
+.challenge__cards { display: grid; gap: 10px; }
+.challenge__card { display: flex; gap: 16px; padding: 18px 20px; border: 1px solid var(--line-light); border-radius: var(--r); background: var(--ivory-soft); transition: border-color var(--dur-short), transform var(--dur-short) var(--ease-out); }
+.challenge__card:hover { border-color: var(--tc); transform: translateX(6px); }
+.challenge__card h3 { margin-bottom: 4px; font-size: 18px; color: var(--ink); }
+.challenge__card p { font-size: 14px; line-height: 22px; color: var(--ink-2); }
+.challenge__icon { flex: none; width: 44px; height: 44px; display: grid; place-items: center; border-radius: var(--r); background: var(--charcoal); color: var(--tc-light); }
+
+.frags { position: relative; aspect-ratio: 6 / 5; border-radius: var(--r-xl); padding: 9% 7%; background: var(--sand); border: 1px solid var(--sand-deep);
+  background-image: linear-gradient(rgba(166, 75, 38, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(166, 75, 38, 0.08) 1px, transparent 1px); background-size: 32px 32px; }
+.frags__frame { position: absolute; inset: 14px; border-radius: var(--r-lg); border: 1.5px dashed rgba(166, 75, 38, 0.35); }
+.frags__states { position: absolute; top: -13px; left: 18px; height: 24px; overflow: hidden; display: grid; }
+.frags__state { grid-area: 1 / 1; padding: 0 12px; line-height: 22px; border-radius: var(--r-full); font-family: var(--font-display); font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ivory-soft); border: 1px solid var(--sand-deep); white-space: nowrap; }
+.frags__state--before { color: var(--ink-2); }
+.frags__state--after { color: var(--ivory-soft); background: var(--tc-deep); border-color: var(--tc-deep); }
+html:not(.has-motion) .frags__state--before { visibility: hidden; }
+.frags__links { position: absolute; inset: 9% 7%; width: 86%; height: 82%; overflow: visible; }
+.frags__link { fill: none; stroke: var(--tc); stroke-width: 2; vector-effect: non-scaling-stroke; stroke-dasharray: 1; }
+.frags__grid { position: relative; height: 100%; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 18% 9%; }
+.frag { position: relative; display: grid; align-content: start; gap: 8px; padding: 12px; border-radius: var(--r); background: var(--ivory-soft); border: 1px solid var(--sand-deep); box-shadow: var(--shadow-1); will-change: transform; }
+.frag::before { content: ''; position: absolute; inset: 0 0 auto; height: 3px; border-radius: var(--r) var(--r) 0 0; background: var(--tone); }
+.frag--ink { --tone: var(--ink); }
+.frag--sand { --tone: var(--sand-deep); }
+.frag--tc { --tone: var(--tc); }
+.frag__label { font-family: var(--font-display); font-weight: 600; font-size: 13px; color: var(--ink); }
+.frag__line { height: 6px; border-radius: 3px; background: var(--sand); }
+.frag__line--short { width: 60%; }
+.frag__dot { position: absolute; right: 10px; top: 14px; width: 8px; height: 8px; border-radius: 50%; background: var(--tc); }
+
+@media (max-width: 1024px) {
+  .challenge__inner { grid-template-columns: 1fr; }
+  .frags { max-width: 620px; width: 100%; margin-inline: auto; }
+}
+@media (max-width: 639px) {
+  .frags { aspect-ratio: 4 / 4.4; padding: 12% 6%; }
+  .frags__grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); gap: 10% 8%; }
+  .frags__links { display: none; }
+}

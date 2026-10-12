@@ -1,0 +1,13 @@
+.intro { position: fixed; inset: 0; z-index: 180; display: grid; place-items: center; cursor: pointer; }
+.intro__half { position: absolute; left: 0; right: 0; height: 50.5%; background: var(--black); }
+.intro__half--top { top: 0; }
+.intro__half--bottom { bottom: 0; }
+.intro__inner { position: relative; display: grid; justify-items: center; gap: 18px; }
+.intro__stroke { fill: none; stroke: var(--tc); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; }
+.intro__dot { fill: var(--tc); }
+.intro__dot--light { fill: var(--tc-light); }
+.intro__wordwrap { overflow: hidden; display: block; }
+.intro__word { display: block; font-family: var(--font-display); font-weight: 700; font-size: 26px; letter-spacing: -0.03em; color: var(--ivory); }
+.intro__word b { color: var(--tc); }
+.intro__skip { position: absolute; right: 24px; bottom: 24px; min-height: 44px; padding: 0 16px; border-radius: var(--r-full); border: 1px solid var(--graphite-line); background: transparent; color: var(--on-dark-2); font-family: var(--font-display); font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; }
+.intro__skip:hover { color: var(--ivory); border-color: var(--tc); }

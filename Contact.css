@@ -1,0 +1,71 @@
+.contact { padding-bottom: var(--s-3xl); }
+.contact__frame { position: relative; display: grid; grid-template-columns: 5fr 7fr; gap: var(--s-2xl); padding: clamp(24px, 4.5vw, 64px); border-radius: var(--r-xl); background: var(--black); }
+.contact__frame::before { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: radial-gradient(50% 60% at 15% 20%, rgba(200, 100, 59, 0.16), transparent 70%), linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 48px 48px, linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 48px 48px; mask-image: linear-gradient(120deg, #000 10%, transparent 60%); -webkit-mask-image: linear-gradient(120deg, #000 10%, transparent 60%); }
+.contact__paths { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.contact__frame-path { fill: none; stroke: rgba(200, 100, 59, 0.55); stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-dasharray: 1; }
+.contact__packet { fill: none; stroke: var(--tc-light); stroke-width: 3; stroke-linecap: round; vector-effect: non-scaling-stroke; stroke-dasharray: 0.05 0.95; opacity: 0; filter: drop-shadow(0 0 6px rgba(224, 138, 95, 0.9)); }
+html.has-motion .contact__packet { opacity: 1; }
+.contact__focal { position: absolute; right: 28px; top: 28px; width: 14px; height: 14px; border-radius: 4px; background: var(--tc); box-shadow: 0 0 0 7px rgba(200, 100, 59, 0.18); transform: rotate(45deg); animation: ping 2.6s infinite; }
+
+.contact__intro { position: relative; display: grid; gap: 20px; align-content: start; justify-items: start; }
+.contact__intro .t-h2 { color: var(--ivory); }
+.contact__direct { display: grid; gap: 14px; width: 100%; padding: 18px 0; border-block: 1px solid var(--line-dark); }
+.contact__direct li { display: grid; gap: 2px; }
+.contact__direct .t-label { color: var(--on-dark-2); }
+.contact__direct a { font-family: var(--font-display); font-weight: 600; font-size: 18px; color: var(--ivory); text-decoration: none; word-break: break-word; background: linear-gradient(var(--tc), var(--tc)) 0 100% / 0 1px no-repeat; transition: background-size 500ms var(--ease-out), color 300ms; justify-self: start; }
+.contact__direct a:hover { background-size: 100% 1px; color: var(--tc-light); }
+
+.cform { position: relative; display: grid; gap: var(--s-lg); background: var(--ivory-soft); color: var(--ink); border-radius: var(--r-lg); padding: var(--s-xl) var(--s-lg) var(--s-lg); box-shadow: var(--shadow-3); }
+.cform__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px var(--s-lg); }
+
+/* Floating-label fields with animated underline */
+.field { position: relative; display: grid; align-content: start; }
+.field--full { grid-column: 1 / -1; }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 54px; padding: 22px 2px 8px; border: 0; border-bottom: 1px solid var(--sand-deep); border-radius: 0;
+  background: transparent; color: var(--ink); font-size: 16px; line-height: 22px; outline: none; appearance: none; -webkit-appearance: none;
+}
+.field textarea { resize: vertical; min-height: 130px; padding-top: 28px; }
+.field label { position: absolute; left: 2px; top: 18px; font-family: var(--font-display); font-weight: 500; font-size: 15px; color: var(--ink-2); pointer-events: none; transform-origin: left top; transition: transform 400ms var(--ease-out), color 300ms; }
+.field label span[aria-hidden] { color: var(--tc-deep); }
+.field__opt { color: var(--ink-2); font-weight: 400; }
+.field input:focus + label, .field input:not(:placeholder-shown) + label,
+.field textarea:focus + label, .field textarea:not(:placeholder-shown) + label,
+.field--select label { transform: translateY(-16px) scale(0.78); color: var(--tc-deep); }
+.field--select select { cursor: pointer; padding-right: 32px; }
+.field--select select:invalid { color: var(--ink-2); }
+.field--select::after { content: ''; position: absolute; right: 8px; top: 28px; width: 8px; height: 8px; border-right: 1.5px solid var(--ink-2); border-bottom: 1.5px solid var(--ink-2); transform: rotate(45deg); pointer-events: none; }
+.field__line { position: absolute; left: 0; right: 0; top: 53px; height: 2px; background: var(--tc); transform: scaleX(0); transform-origin: left; transition: transform 600ms var(--ease-out); }
+.field--full .field__line { top: auto; bottom: auto; }
+.field textarea ~ .field__line { top: auto; position: relative; margin-top: -2px; }
+.field:focus-within .field__line { transform: scaleX(1); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { box-shadow: 0 2px 0 0 var(--tc); }
+.field__hint { margin-top: 8px; font-size: 13px; line-height: 19px; color: var(--ink-2); }
+.has-error input, .has-error select, .has-error textarea { border-bottom-color: var(--error); }
+.field__err { display: flex; gap: 6px; align-items: flex-start; margin-top: 8px; font-size: 13px; line-height: 19px; font-weight: 500; color: var(--error); }
+.field__err::before { content: '!'; flex: none; display: grid; place-items: center; width: 16px; height: 16px; margin-top: 1px; border-radius: 50%; background: var(--error); color: #fff; font-size: 11px; font-weight: 700; }
+
+.cform__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.cform__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; }
+.cform__privacy { font-size: 13px; line-height: 19px; color: var(--ink-2); flex: 1; min-width: 200px; }
+.cform__submit.is-success { --bg: var(--ink); --bd: var(--ink); }
+.cform__check { fill: none; stroke: var(--ivory-soft); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; animation: drawCheck 600ms var(--ease-out) both; }
+@keyframes drawCheck { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+
+.cform__status:empty { display: none; }
+.msg { padding: 14px 16px; border-radius: var(--r); font-size: 14px; line-height: 22px; border: 1px solid; animation: swapIn 600ms var(--ease-out); }
+.msg strong { display: block; font-family: var(--font-display); font-weight: 600; }
+.msg a { color: var(--tc-deep); }
+.msg--ok { background: #eef4ef; border-color: #c9dccd; color: #2f5a3a; }
+.msg--info { background: var(--tc-tint); border-color: #eac7b4; color: var(--ink); }
+.msg--err { background: #f8e3dd; border-color: #e7b9ab; color: #7e2a17; }
+@keyframes swapIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 1024px) { .contact__frame { grid-template-columns: 1fr; gap: var(--s-xl); } }
+@media (max-width: 639px) {
+  .contact__frame { padding: 22px 16px; }
+  .cform { padding: var(--s-lg) var(--s-md) var(--s-md); }
+  .cform__grid { grid-template-columns: 1fr; }
+  .cform__foot .btn, .contact__intro .btn { width: 100%; }
+  .contact__intro > div { width: 100%; }
+}
