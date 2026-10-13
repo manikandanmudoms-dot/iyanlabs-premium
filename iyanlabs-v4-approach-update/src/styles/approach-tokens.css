@@ -1,0 +1,25 @@
+/* iyanLabs v4 "Precision Intelligence" palette, scoped to the Our Approach page (.ap). */
+.ap {
+  --ap-base: #060914;
+  --ap-raised: #0c1222;
+  --ap-surface: #111a2e;
+  --ap-glass: rgba(255, 255, 255, 0.04);
+  --ap-border: rgba(148, 163, 184, 0.16);
+  --ap-text: #f4f7ff;
+  --ap-text-2: #a7b2cc;
+  --ap-text-3: #8b96b2;
+  --ap-indigo: #6366f1;
+  --ap-indigo-l: #a5b4fc;
+  --ap-cyan: #22d3ee;
+  --ap-violet: #8b5cf6;
+  --ap-grad: linear-gradient(120deg, #6366f1 0%, #8b5cf6 45%, #22d3ee 100%);
+  --ap-ember: #ff6b3d;
+  --ap-mint: #34d399;
+  --ap-paper: #f5f7fb;
+  --ap-ink: #0b1020;
+  --ap-ink-2: #46506a;
+  background: var(--ap-base);
+  color: var(--ap-text);
+}
+.ap .grad { background: linear-gradient(90deg, #a5b4fc, #c4b5fd, #67e8f9, #a5b4fc); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: gradShift 8s linear infinite; }
+.ap .eyebrow::before { background: var(--ap-grad); box-shadow: 0 0 12px rgba(99, 102, 241, 0.8); }
